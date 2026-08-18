@@ -60,4 +60,4 @@ JWT_SECRET=
 
 ## A Note
 
-This isn't a product. It's four people keeping their story somewhere safe — and letting a little of it out into the world.
+This isn't a product. It's three people keeping their story somewhere safe — and letting a little of it out into the world.
