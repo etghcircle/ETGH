@@ -21,7 +21,7 @@ Some of it is just for the three of us — Admin and the three of us — and sta
 | Who | 👀 Can view | ✏️ Can add/edit |
 |---|---|---|
 | 🌎 Anyone (no login) | Public content only | Nothing |
-| 🧑Friend 1🧑Friend 2🧑 Friend 3 | Everything | Only their own content |
+| 🧑Friend 1🧑Friend 2🧑Friend 3 | Everything | Only their own content |
 | 👑 Admin | Everything | Everything |
 
 🔑 Usernames and passwords are fixed — password only can be changed by admin.
