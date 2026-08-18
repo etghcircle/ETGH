@@ -14,7 +14,7 @@ Some stories are open for anyone to see. The rest stay just between us.
 - **Fun Stuff** — inside jokes, random bits, things that just belong here.
 
 Some of it is public — anyone with the link can wander through it.
-Some of it is just for the four of us — Admin and the three of us — and stays locked behind a login.
+Some of it is just for the three of us — Admin and the three of us — and stays locked behind a login.
 
 ## Who Can Do What
 
