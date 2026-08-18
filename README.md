@@ -24,7 +24,7 @@ Some of it is just for the three of us — Admin and the three of us — and sta
 | Friend 1 / Friend 2 / Friend 3 | Everything | Only their own content |
 | Admin | Everything | Everything |
 
-Usernames are fixed — only passwords can be changed.
+Usernames and passwords are fixed — password only can be changed by admin.
 
 ## Setup
 
