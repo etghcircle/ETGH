@@ -21,7 +21,7 @@ Some of it is just for the four of us — Admin and the three of us — and stay
 | Who | Can view | Can add/edit |
 |---|---|---|
 | Anyone (no login) | Public content only | Nothing |
-| Friend 1 / Friend 2 / Friend 3 | Their own private content + all public content | Only their own content |
+| Friend 1 / Friend 2 / Friend 3 | Everything | Only their own content |
 | Admin | Everything | Everything |
 
 Usernames are fixed — only passwords can be changed.
