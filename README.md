@@ -24,7 +24,7 @@ Some of it is private 🔐 — just for the three of us and the Admin, and stays
 | Who | 👀 Can view | ✏️ Can add/edit |
 |---|---|---|
 | 🌎 Anyone (no login) | Public content only | Nothing |
-| 🧑 Friend 1 / 🧑 Friend 2 / 🧑 Friend 3 | Everything | Only their own content |
+| 🧑Friend 1🧑Friend 2🧑Friend 3 | Everything | Only their own content |
 | 👑 Admin | Everything | Everything |
 
 🔑 Usernames and passwords are fixed — only the Admin can change passwords.
