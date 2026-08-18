@@ -42,7 +42,7 @@ cd frontend
 ./gradlew wasmJsBrowserRun
 ```
 
-You'll need a PostgreSQL instance running and a Cloudinary account for media hosting. Add your credentials to a local `.env` file (never commit this):
+You'll need a MongoDB instance running and a Cloudinary account for media hosting. Add your credentials to a local `.env` file (never commit this):
 
 ```
 DATABASE_URL=
