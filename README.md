@@ -41,26 +41,25 @@ cd backend
 cd frontend
 ./gradlew wasmJsBrowserRun
 
-You'll need a MongoDB 🍃 instance running and a Cloudinary ☁️ account for media hosting. Add your credentials to a local .env file (never commit this 🚫):
+You'll need a MongoDB 🍃 instance running and a Cloudinary ☁️ account for media hosting.
 
+Add your credentials to a local `.env` file (never commit this 🚫):
+
+```env
 DATABASE_URL=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
 JWT_SECRET=
 
-📚 Project Docs
+## 📚 Project Docs
 
-ARCHITECTURE.md — folder layout and data flow 🏗️
+- `ARCHITECTURE.md` — folder layout and data flow 🏗️
+- `TECH_STACK.md` — exact versions and approved/banned libraries 🛠️
+- `SRS.md` — full feature list and rules 📝
+- `DECISIONS.md` — why things are built the way they are 💡
 
-TECH_STACK.md — exact versions and approved/banned libraries 🛠️
-
-SRS.md — full feature list and rules 📝
-
-DECISIONS.md — why things are built the way they are 💡
-
-
-❤️ A Note
+## ❤️ A Note
 
 This isn't a product. It's three people keeping their story somewhere safe 🫂 — and letting a little of it out into the world 🌎.
 
-Three friends. One story. Countless memories. 🗝️❤️
+**Three friends. One story. Countless memories. 🗝️❤️**
