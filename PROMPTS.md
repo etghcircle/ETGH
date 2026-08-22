@@ -14,16 +14,16 @@ Add a Ktor route `[METHOD] [PATH]` in routes/[FileName].kt.
 
 ## Add a new memory type/field
 ```
-Add [field name] to the Memory model (models/Memory.kt) and its Exposed table.
+Add [field name] to the Memory model (models/Memory.kt) and update the MongoDB schema.
 - Type: [type]
 - Nullable: [yes/no]
 - Update MemoryRepository, MemoryService, and the DTO used by the frontend.
 - Do not change existing field names or the public/private enum.
 ```
 
-## Add/modify a Compose UI screen
+## Add/modify a Kobweb page or component
 ```
-Build a Compose screen for [purpose] in frontend/composables/[Name].kt.
+Build a Kobweb page/component for [purpose] in frontend/pages/[Name].kt or frontend/components/[Name].kt.
 - Data comes from [endpoint].
 - Must visually distinguish public vs private items (e.g. a lock icon on private).
 - Follow the existing design tokens in ARCHITECTURE.md — do not introduce a new color palette or font.

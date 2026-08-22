@@ -14,10 +14,11 @@ view/edit).
 
 ## Tech stack (summary — see TECH_STACK.md for exact versions)
 - **Backend**: Kotlin + Ktor
-- **DB**: PostgreSQL via Exposed ORM
-- **Frontend**: Kotlin Compose Multiplatform for Web (Wasm)
+- **DB**: MongoDB
+- **Frontend**: Kotlin + Kobweb
 - **Auth**: Fixed 4-account model (Admin, F1, F2, F3), username fixed, password changeable, session via JWT
 - **Video hosting**: Cloudinary (signed URLs for private videos)
+- **Deployment**: GitHub Actions (private monorepo)
 
 ## Folder layout (high level — see ARCHITECTURE.md for detail)
 ```
@@ -27,7 +28,8 @@ view/edit).
   /repositories
   /models
 /frontend
-  /composables
+  /pages
+  /components
   /viewmodels
   /assets
 ```

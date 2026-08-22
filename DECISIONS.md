@@ -4,6 +4,21 @@ Append-only log. Newest at top. Never delete an entry — if a decision is rever
 
 ---
 
+**[2026-08-23] Frontend: Kobweb instead of Compose Multiplatform Web**
+- Considered: Direct Compose Multiplatform Web (Wasm), React with TypeScript.
+- Chose Kobweb: provides a Kotlin-first web framework with built-in routing and simpler dev experience. Enables full-Kotlin stack (backend + frontend) without the complexity of raw Wasm compilation.
+- This reverses the [2026-08-15] Compose decision — Kobweb is Kotlin for web, maintains single-language goal while being more practical for web development.
+
+**[2026-08-23] Database: MongoDB instead of PostgreSQL/Exposed**
+- Considered: PostgreSQL + Exposed ORM.
+- Chose MongoDB: simpler persistence model for this personal-scale project. No schema migrations needed, flexible document structure fits the memory/content model naturally.
+- Reason: reduces operational overhead, easier to evolve the data model without migrations.
+
+**[2026-08-23] Repository/Deployment: Private GitHub monorepo with GitHub Actions**
+- Frontend and backend remain in one private GitHub repository.
+- GitHub Actions will handle: build, test, and deployment workflows.
+- Reason: all code in one place (single monorepo), CI/CD via GitHub native tools, no external services needed for deployment.
+
 **[2026-08-15] Video hosting: Cloudinary, not YouTube/self-hosted**
 - Considered: YouTube (unlisted), Bunny.net Stream, Cloudflare Stream, self-hosted S3.
 - Chose Cloudinary: free tier is enough for personal-project scale, API is straightforward for a backend-first dev, supports signed URLs so private videos can be gated by the app's own auth instead of relying on an unlisted link.

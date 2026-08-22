@@ -3,18 +3,20 @@
 ## Style
 - Kotlin, official style guide (4-space indent, no wildcard imports).
 - Backend: Ktor idioms — routes in `routes/`, business logic in `services/`, DB access in `repositories/`.
-- Frontend: Compose Multiplatform (Web/Wasm) — composables are small, stateless where possible; state hoisted to view models.
+- Frontend: Kobweb — pages in `pages/`, reusable components in `components/`, state hoisted to viewmodels.
 - No hardcoded secrets (Cloudinary keys, JWT secret, DB creds) — always read from environment variables / `.env` (never commit `.env`).
 - Names: Admin, F1, F2, F3 are fixed constants — never treat as user-editable data.
 
 ## Build
 ```bash
-# Backend (Ktor)
-./gradlew :backend:build
-./gradlew :backend:run
+# Backend (Ktor + MongoDB)
+cd backend
+./gradlew build
+./gradlew run
 
-# Frontend (Compose for Web)
-./gradlew :frontend:wasmJsBrowserRun
+# Frontend (Kobweb)
+cd frontend
+./gradlew :frontend:kobwebStart  # Start dev server (http://localhost:8080)
 ```
 
 ## Test
