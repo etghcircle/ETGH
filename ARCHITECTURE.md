@@ -23,10 +23,11 @@ project-root/
 │   │   └── Application.kt   # Ktor entry point, plugin/module wiring
 │   └── src/test/kotlin/     # Mirrors main/ structure
 ├── frontend/
-│   └── src/wasmJsMain/kotlin/
-│       ├── composables/     # UI screens/components
-│       ├── viewmodels/      # State holders, API calls
-│       └── assets/          # Static design tokens, fonts
+│   └── src/jsMain/kotlin/
+│       ├── pages/          # Kobweb page routes
+│       ├── components/     # Reusable Kobweb composables
+│       ├── viewmodels/     # State holders, API calls
+│       └── assets/         # Static design tokens, fonts
 ├── CLAUDE.md
 ├── CONTEXT.md
 ├── PROMPTS.md
@@ -40,13 +41,13 @@ project-root/
 ## File placement rules
 - New Ktor route → `routes/`. Never put DB queries or permission logic directly in a route handler; call a service.
 - New business rule (e.g. "can F2 edit this?") → `services/PermissionService.kt`. Do not duplicate permission checks inline elsewhere.
-- New DB table/query → `repositories/`. Repositories return domain models, not raw DB rows.
-- New UI screen → `frontend/composables/`. Screens should be dumb — they call a `viewmodel` for data/state, not the API directly.
-- Shared design values (colors, spacing, fonts) → `frontend/assets/`. No screen should hardcode a hex color inline.
+- New MongoDB collection/query → `repositories/`. Repositories return domain models, not raw DB documents.
+- New UI page/screen → `frontend/pages/` (for Kobweb routes) or `frontend/components/` (for reusable composables). Pages should call viewmodels for data/state, not the API directly.
+- Shared design values (colors, spacing, fonts) → `frontend/assets/`. No component should hardcode a hex color inline.
 
 ## Data flow (request → UI)
 ```
-Browser (Compose Web)
+Browser (Kobweb)
    │  HTTP request (with session/JWT cookie if authenticated)
    ▼
 Ktor route (routes/*)
@@ -56,13 +57,13 @@ Service layer (services/*)
    │  checks PermissionService (Admin? owner? public content?)
    │  calls
    ▼
-Repository (repositories/*) ──▶ PostgreSQL (via Exposed)
+Repository (repositories/*) ──▶ MongoDB (via Kotlin driver)
    │
    ▼ (for media)
 CloudinaryService ──▶ Cloudinary API (returns signed URL if private, plain URL if public)
    │
    ▼
-Response DTO ──▶ back to Compose frontend ──▶ rendered in composable
+Response DTO ──▶ back to Kobweb frontend ──▶ rendered in component
 ```
 
 ## Rule of thumb
